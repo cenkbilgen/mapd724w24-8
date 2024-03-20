@@ -44,7 +44,7 @@ struct ImagePicker: View {
     @State var presentHistory = false
 
     static let detents: [PresentationDetent] = [.fraction(0.3), .large]
-    @State var currentDetent: PresentationDetent = detents[0] // initial value doesn't really matter, will be reset on first presentation
+    @State var currentDetent: PresentationDetent = ImagePicker.detents[0]
 
     var body: some View {
         VStack(spacing: 0) {
@@ -89,9 +89,10 @@ struct ImagePicker: View {
                       preferredItemEncoding: .compatible)
         .sheet(isPresented: $presentHistory) {
             HistorySheet(isLarge: currentDetent == .large)
-                .presentationDetents(Set(ImagePicker.detents), // takes a set not array
+                .presentationDetents(Set(ImagePicker.detents),
                                      selection: $currentDetent)
-                .environmentObject(state) // available to all Views under here in the heirarchy
+                .environmentObject(state) // "state" now available to all Views under HistorySheet in the heirarchy
+                // NOTE: modals like sheets create their own hierarchy, not part of the one established in App Scene
         }
     }
 }
@@ -100,7 +101,13 @@ struct HistorySheet: View {
     let isLarge: Bool
 
     var body: some View {
-        // NOTE: We could do ScrollView(isLarge ? .vertical : .horizontal) it does not behave the same with some additional modifiers and this arguably more clear
+
+        // ScrollView was not expected for assignment, but everybody did
+
+        // NOTE: Alternative to this is:
+        // ScrollView(isLarge ? .vertical : .horizontal) { if ... }
+        // but it did not behave as expected without additional modifiers
+
         if isLarge {
             ScrollView(.vertical) {
                 VStack {
@@ -120,7 +127,9 @@ struct HistorySheet: View {
 
     struct ImagesView: View {
         @EnvironmentObject var state: PhotosState
+
         @Environment(\.dismiss) var dismiss
+
         let isDeleteAllowed: Bool
 
         var body: some View {
@@ -135,7 +144,7 @@ struct HistorySheet: View {
                             Color.clear // we want the hit area to be whole image
                                 .overlay(Image(systemName: "trash.circle")
                                     .resizable()
-                                    .background(Circle().fill(.white).opacity(0.2))
+                                    .background(Circle().fill(.white).opacity(0.2)) // make button standout a bit, could also add .shadow
                                     .frame(width: 60, height: 60)) // fix size to sensible button size
                         }
                             .opacity(isDeleteAllowed ? 1 : 0)

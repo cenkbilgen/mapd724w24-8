@@ -52,9 +52,9 @@
 			isa = PBXGroup;
 			children = (
 				B3763BC82B9B6743007DFDD8 /* Module8App.swift */,
+				B3763BD62B9B6EFC007DFDD8 /* ImagePicker.swift */,
 				B3763BCC2B9B6744007DFDD8 /* Assets.xcassets */,
 				B3763BCE2B9B6744007DFDD8 /* Preview Content */,
-				B3763BD62B9B6EFC007DFDD8 /* ImagePicker.swift */,
 			);
 			path = Module8;
 			sourceTree = "<group>";
