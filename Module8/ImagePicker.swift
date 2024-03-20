@@ -65,6 +65,10 @@ struct ImagePicker: View {
                     .opacity(state.images.count >= 1 ? 1 : 0)
                     .ignoresSafeArea([]) // do not want to extend
                 }
+                .overlay(alignment: .top) {
+                    Text(state.error?.localizedDescription ?? "")
+                        .padding()
+                }
 
             HStack(spacing: 0) {
                 Button {
