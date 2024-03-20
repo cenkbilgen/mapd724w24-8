@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		B3763BC92B9B6743007DFDD8 /* Module8App.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3763BC82B9B6743007DFDD8 /* Module8App.swift */; };
-		B3763BCB2B9B6743007DFDD8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3763BCA2B9B6743007DFDD8 /* ContentView.swift */; };
 		B3763BCD2B9B6744007DFDD8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3763BCC2B9B6744007DFDD8 /* Assets.xcassets */; };
 		B3763BD02B9B6744007DFDD8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3763BCF2B9B6744007DFDD8 /* Preview Assets.xcassets */; };
 		B3763BD72B9B6EFC007DFDD8 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3763BD62B9B6EFC007DFDD8 /* ImagePicker.swift */; };
@@ -17,7 +16,6 @@
 /* Begin PBXFileReference section */
 		B3763BC52B9B6743007DFDD8 /* Module8.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Module8.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3763BC82B9B6743007DFDD8 /* Module8App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Module8App.swift; sourceTree = "<group>"; };
-		B3763BCA2B9B6743007DFDD8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B3763BCC2B9B6744007DFDD8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B3763BCF2B9B6744007DFDD8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B3763BD62B9B6EFC007DFDD8 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
@@ -54,7 +52,6 @@
 			isa = PBXGroup;
 			children = (
 				B3763BC82B9B6743007DFDD8 /* Module8App.swift */,
-				B3763BCA2B9B6743007DFDD8 /* ContentView.swift */,
 				B3763BCC2B9B6744007DFDD8 /* Assets.xcassets */,
 				B3763BCE2B9B6744007DFDD8 /* Preview Content */,
 				B3763BD62B9B6EFC007DFDD8 /* ImagePicker.swift */,
@@ -141,7 +138,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3763BD72B9B6EFC007DFDD8 /* ImagePicker.swift in Sources */,
-				B3763BCB2B9B6743007DFDD8 /* ContentView.swift in Sources */,
 				B3763BC92B9B6743007DFDD8 /* Module8App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
